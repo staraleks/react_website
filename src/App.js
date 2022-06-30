@@ -24,7 +24,7 @@ function App() {
     <AnimatePresence exitBeforeEnter>
     <HashRouter>
     <Switch location={location} key={location.pathname}>
-      <Route exact path="https://Negaflaneur.github.io/react_website?" component={Main} />
+      <Route exact path="https://negaflaneur.github.io/react_website/" component={Main} />
       <Route exact path="/about" component={AboutPage} />
       <Route exact path="/contact" component={ContactPage} />
       <Route exact path="/skills" component={MySkillsPage} />
