@@ -2,7 +2,7 @@ import GlobalStyle from "./globalStyles"
 import {ThemeProvider} from "styled-components"
 import {lightTheme} from "./components/Theme"
 import {darkTheme} from "./components/Theme"
-import { HashRouter, Route, Switch, useLocation } from "react-router-dom"
+import { HashRouter, Route, useLocation, Routes , Router} from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
 
 //components
@@ -15,27 +15,25 @@ import ContactPage from "./components/ContactPage"
 
 function App() {
   const location = useLocation()
-  return <>
-  <GlobalStyle/>
-
+  return (
+    <div>
+    <GlobalStyle/>
     <ThemeProvider theme={lightTheme}>
     <SoundBar />
-    
-    <AnimatePresence exitBeforeEnter>
-    <HashRouter>
-    <Switch location={location} key={location.pathname}>
-      <Route exact path="/"> <Main /> </Route>
-      <Route exact path="/about" component={AboutPage} />
-      <Route exact path="/contact" component={ContactPage} />
-      <Route exact path="/skills" component={MySkillsPage} />
-      <Route exact path="/projects" component={Projects} />
-    </Switch>
-    </HashRouter>
-    </AnimatePresence>
 
-    </ThemeProvider>
+  <AnimatePresence exitBeforeEnter>
+  <Routes location={location} key={location.pathname}>
+    <Route exact path="/" element={<Main />} />
+    <Route exact path="/about" element={<AboutPage />} />
+    <Route exact path="/contact" element={<ContactPage />} />
+    <Route exact path="/skills" element={<MySkillsPage />} />
+    <Route exact path="/projects" element={< Projects />} />
+  </Routes>
+  </AnimatePresence>
+  </ThemeProvider>
+</div>
     
-    </>
+  )
     
 }
 

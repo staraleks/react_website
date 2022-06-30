@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import styled, { keyframes } from "styled-components"
 import LogoComponent from "../subComponents/LogoComponent"
 import PowerButton from "../subComponents/PowerButton"
@@ -70,23 +70,28 @@ transition: all 1s ease;
 }
 `
 
-const CONTACT = styled(NavLink)`
+const CONTACT = styled.button`
 color:${props=>props.click ? props.theme.body : props.theme.text};
 position: absolute;
 top: 50%;
 left: 0;
 transform: rotate(90deg) translate(-50%, 50%);
 text-deocoration:none;
+outline:none;
+border:none;
+background:none;
 z-index:1;
 `
 
-const PROJECTS = styled(NavLink)`
+const PROJECTS = styled.button`
 color: ${props=>props.theme.text};
 position: absolute;
 top: 45%;
 right: 1rem;
 transform: rotate(270deg) translate(-50%, -50%);
 text-deocoration:none;
+border:none;
+background:none;
 z-index:1;
 `
 
@@ -101,15 +106,19 @@ display: flex;
 justify-content: space-evenly;
 `
 
-const ABOUT = styled(NavLink)`
+const ABOUT = styled.button`
 color:${props=>props.click ? props.theme.body : props.theme.text};
 text-deocoration:none;
+border:none;
+background:none;
 z-index:1;
 `
 
-const SKILLS = styled(NavLink)`
+const SKILLS = styled.button`
 color:${props=>props.theme.text};
 text-deocoration:none;
+border:none;
+background:none;
 z-index:1;
 `
 
@@ -131,6 +140,8 @@ const Main = () =>{
 
     const handleClick = ()=> setClick(!click);
 
+    const navigate = useNavigate();
+
     return (
         <MainContainer  variants={container} initial='hidden' animate='show'>
           <DarkDiv click={click} />
@@ -143,7 +154,7 @@ const Main = () =>{
                 <YinYang onClick={()=> handleClick()} width={click ? 120: 200} height={click ? 120: 200} fill='currentColor' />
                 <span>Click me</span>
             </Center>
-            <CONTACT to="/contact" click={click}>
+            <CONTACT onClick={()=> navigate("/contact")} click={click}>
                 <motion.h2
                 initial = {{
                     y:200,
@@ -159,7 +170,7 @@ const Main = () =>{
                     Contact me
                 </motion.h2>
             </CONTACT>
-            <PROJECTS to="/projects" >
+            <PROJECTS onClick={()=> navigate("/projects")} click={click}>
                 <motion.h2
                 initial = {{
                     y:200,
@@ -176,7 +187,7 @@ const Main = () =>{
                 </motion.h2>
             </PROJECTS>
             <BottomBar>
-            <ABOUT to="/about" click={click}>
+            <ABOUT onClick={()=> navigate("/about")} click={click}>
                 <motion.h2
                 initial = {{
                     y:200,
@@ -192,7 +203,7 @@ const Main = () =>{
                     About me
                 </motion.h2>
             </ABOUT>
-            <SKILLS to="/skills" click={click}>
+            <SKILLS onClick={()=> navigate("/skills")} click={click}>
                 <motion.h2
                 initial = {{
                     y:200,
