@@ -24,7 +24,7 @@ function App() {
     
     <AnimatePresence exitBeforeEnter>
     <Switch location={location} key={location.pathname}>
-      <Route exact path="/react_website" component={Main} />
+      <Route exact path="/react_website/" component={Main} />
       <Route exact path="/about" component={AboutPage} />
       <Route exact path="/contact" component={ContactPage} />
       <Route exact path="/skills" component={MySkillsPage} />
