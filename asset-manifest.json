@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/react_website/static/js/main.a89743a2.chunk.js",
-    "main.js.map": "/react_website/static/js/main.a89743a2.chunk.js.map",
+    "main.js": "/react_website/static/js/main.22587dd4.chunk.js",
+    "main.js.map": "/react_website/static/js/main.22587dd4.chunk.js.map",
     "runtime-main.js": "/react_website/static/js/runtime-main.fc6afbf5.js",
     "runtime-main.js.map": "/react_website/static/js/runtime-main.fc6afbf5.js.map",
     "static/css/2.8325cca2.chunk.css": "/react_website/static/css/2.8325cca2.chunk.css",
-    "static/js/2.e4212f77.chunk.js": "/react_website/static/js/2.e4212f77.chunk.js",
-    "static/js/2.e4212f77.chunk.js.map": "/react_website/static/js/2.e4212f77.chunk.js.map",
+    "static/js/2.4bca574e.chunk.js": "/react_website/static/js/2.4bca574e.chunk.js",
+    "static/js/2.4bca574e.chunk.js.map": "/react_website/static/js/2.4bca574e.chunk.js.map",
     "index.html": "/react_website/index.html",
     "static/css/2.8325cca2.chunk.css.map": "/react_website/static/css/2.8325cca2.chunk.css.map",
-    "static/js/2.e4212f77.chunk.js.LICENSE.txt": "/react_website/static/js/2.e4212f77.chunk.js.LICENSE.txt",
+    "static/js/2.4bca574e.chunk.js.LICENSE.txt": "/react_website/static/js/2.4bca574e.chunk.js.LICENSE.txt",
     "static/media/intro_image.96ab1e9d.png": "/react_website/static/media/intro_image.96ab1e9d.png",
     "static/media/itachi.8a298779.jpg": "/react_website/static/media/itachi.8a298779.jpg",
     "static/media/lofi.6808be9c.mp3": "/react_website/static/media/lofi.6808be9c.mp3"
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.fc6afbf5.js",
     "static/css/2.8325cca2.chunk.css",
-    "static/js/2.e4212f77.chunk.js",
-    "static/js/main.a89743a2.chunk.js"
+    "static/js/2.4bca574e.chunk.js",
+    "static/js/main.22587dd4.chunk.js"
   ]
 }
