@@ -14,7 +14,6 @@ import SoundBar from "./components/SoundBar"
 import ContactPage from "./components/ContactPage"
 
 function App() {
-
   const location = useLocation()
   return <>
   <GlobalStyle/>
@@ -24,7 +23,7 @@ function App() {
     
     <AnimatePresence exitBeforeEnter>
     <Switch location={location} key={location.pathname}>
-      <Route exact path="/react_website/" component={Main} />
+      <Route exact path="https://Negaflaneur.github.io/react_website/" component={Main} />
       <Route exact path="/about" component={AboutPage} />
       <Route exact path="/contact" component={ContactPage} />
       <Route exact path="/skills" component={MySkillsPage} />
