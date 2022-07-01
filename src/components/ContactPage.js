@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import styled, { keyframes, ThemeProvider } from "styled-components"
 import {darkTheme} from "./Theme"
 import {motion} from 'framer-motion'
-import { YinYang } from '../components/AllSvgs';
+import { PythonLogo } from '../components/AllSvgs';
 
 import SocialIcons from "../subComponents/SocialIcons"
 import LogoComponent from "../subComponents/LogoComponent"
@@ -219,7 +219,7 @@ const ContactPage = () => {
         <LogoComponent theme='dark'/>
         <SocialIcons theme='dark'/>
         <PowerButton />
-        <Rotate><YinYang width={80} height={80} fill={darkTheme.text} /></Rotate>
+        <Rotate><PythonLogo width={80} height={80} fill={darkTheme.text} /></Rotate>
 
         <Main click={click} variants={main} initial='hidden' animate='show'>
             <ContactForm ref={form} onSubmit={Submit}>

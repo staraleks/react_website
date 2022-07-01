@@ -22,9 +22,9 @@ const Main = styled(motion.div)`
 border: 2px solid ${props => props.theme.text};
 color: ${props => props.theme.text};
 background-color: ${props => props.theme.body};
-padding:2rem;
+padding:2em;
 width: 30vw;
-height: 60vh;
+height: 65vh;
 z-index: 3;
 line-height: 1.5;
 cursor: pointer;
@@ -34,17 +34,19 @@ display:flex;
 flex-direction:column;
 justify-content: space-between;
 
+
 &:hover {
     color: ${props => props.theme.body};
     background-color: ${props => props.theme.text};
 }
+
 `
 
 const Title = styled.h2`
 display:flex;
 justify-content:center;
 align-items: center;
-font-size: calc(1em + 1vw);
+font-size: calc(2.5vmax + 0.25em);
 
 ${Main}:hover &{
     &>*{
@@ -53,26 +55,28 @@ ${Main}:hover &{
 }
 
 &>*:first-child{
-margin-right: 1rem;
+margin-right: 1.5vmax;
 }
 `
 
 const Description = styled.div`
 color: ${props => props.theme.text};
-font-size: calc(0.6em + 1vw);
-padding: 0.5rem, 0;
+font-size: calc(1.5vmax + 0.25em);
+padding: 0.3vmin 0;
 
 strong{
-    margin-bottom:1rem;
+    margin-bottom:0.5vmax;
     text-transform:uppercase;
 }
 ul,p{
-    margin-left: 2rem;
+    margin-left: 1vmax;
 }
+
 
 ${Main}:hover &{
      color:${props => props.theme.body};
 }
+
 `
 
 //framer motion
@@ -119,6 +123,8 @@ const MySkillsPage = () =>{
                 <ul>
                     <li>Desktop game development</li>
                     <li>Mobile game development</li>
+                    <li>Whatever</li>
+                    <li>Whatever</li>
                 </ul>
             </Description>
             <Description>
@@ -144,7 +150,7 @@ const MySkillsPage = () =>{
                     <li>Developing trading applications</li>
                     <li>Parsing and web scraping</li>
                     <li>Developing algorithms on Python</li>
-                    <li>Writing scripts to automate my daily tasks</li>
+                    <li>Daily routine automation</li>
                 </ul>
             </Description>
             <Description>

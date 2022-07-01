@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react"
 import styled, {keyframes, ThemeProvider } from "styled-components"
 import {darkTheme} from "./Theme"
-import { Github, YinYang } from '../components/AllSvgs';
+import { Github, PythonLogo } from '../components/AllSvgs';
 import { NavLink } from 'react-router-dom';
 import {motion} from 'framer-motion';
 import {Work} from "../data/WorkData"
@@ -22,17 +22,18 @@ background-color: ${props => props.theme.body};
 height: 100vh;
 display: flex;
 align-items: center;
-justify-content: center;
+justify-content: space-evenly;
 padding-left:5vw;
 
 pagination{
     padding-top: 5vw;
 }
+
 `
 
 const Card = styled(motion.div) `
-width: 15vw;
-height: 40vh;
+width: 35vw;
+height: 60vh;
 background-color: ${props => props.theme.text};
 color: ${props => props.theme.body};
 padding: 2vh 2.5vw;
@@ -51,11 +52,11 @@ transition: all 0.2s ease;
 `
 
 const Title = styled.h2`
-font-size: 1.5vw;
+font-size: calc(2.5vmax + 0.25em);
 `
 
 const Description = styled.h2`
-font-size: calc(0.8em + 0.3vw);
+font-size: calc(1.5vmax + 0.5em);
 font-family: 'Karla', sans-serif;
 font-weight: 500;
 `
@@ -72,7 +73,7 @@ ${Card}: hover &{
 
 const Tag = styled.span `
 margin-right: 1vw;
-font-size: 1vw;
+font-size: calc(1.5vmax + 0.25em);
 `
 
 const Footer = styled.footer `
@@ -84,9 +85,10 @@ const Link = styled(NavLink) `
 background-color:${props => props.theme.body};
 color: ${props => props.theme.text};
 text-decoration: none;
-padding: 0.5vw 3vw;
+padding: 1vw 3vw;
+margin-bottom: 2.5vmax;
 border-radius: 0 0 0 50px;
-font-size: 1.5vw;
+font-size: calc(1.5vmax + 0.75em);
 
 ${Card}: hover &{
     background-color:${props => props.theme.text};
@@ -123,11 +125,12 @@ animation: ${rotate} infinite 1.5s linear;
 `
 const WORK = styled.h1 `
 font-family: 'Karla', sans-serif;
-font-size: calc(1rem + 15vw);
+font-size: calc(12vmax + 1.5em);
 color:${props => props.theme.text};
 position: fixed;
-right:0;
-top: 0;
+left: 0;
+top: 30%;
+transform: rotate(75deg) translate(-5%, 60%);
 padding: 2vh 2.5vw;
 margin-right: 2vw;
 display:flex;
@@ -161,22 +164,24 @@ const Projects = () =>{
     return(
     <ThemeProvider theme={darkTheme}>
         <Container variants={container} initial='hidden' animate='show'>
+            
+        <LogoComponent theme='dark'/>
+        <SocialIcons theme='dark'/>
+        <PowerButton />
+
+        <Rotate><PythonLogo width={80} height={80} fill={darkTheme.text} /></Rotate>
+
+        <WORK>WORK</WORK>
         <Swiper
-        slidesPerView={3}
+        slidesPerView={2}
+        centeredSlides={true}
         spaceBetween={50}
+        grabCursor={true}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
         className="mySwiper">
-
-        <LogoComponent theme='dark'/>
-        <SocialIcons theme='dark'/>
-        <PowerButton />
-
-        <Rotate><YinYang width={80} height={80} fill={darkTheme.text} /></Rotate>
-
-        <WORK>WORK</WORK>
 
             {
                 Work.map(item => {
@@ -197,7 +202,7 @@ const Projects = () =>{
                             Check
                         </Link>
                         <Git to={{pathname: `${item.github}`}} target="_blank" >
-                            <Github width={30} height={30}/>
+                            <Github width={"5vmax"} height={"5vmax"}/>
                         </Git>
                     </Footer>
                     </Card>

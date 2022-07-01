@@ -5,9 +5,9 @@ import { PowerBtn } from "../components/AllSvgs"
 
 const Power = styled.button`
 position:fixed;
-top: 2rem;
+top: 1rem;
 left: 50%;
-transform: translate(-50%, 0);
+right:50%;
 background-color: #FCF6F4;
 padding: 0%, 3rem;
 border-radius:50%;
@@ -33,7 +33,7 @@ cursor:pointer;
 }
 `
 
-const PowerButton = () =>{
+const PowerButton = (props) =>{
     return (
         <Power>
         <NavLink to="/">

@@ -27,32 +27,35 @@ top: 20%;
 right: 5%;
 width: 20vw;
 animation: ${floating} 4s ease infinite;
+display:block;
+
 
 img{
     width: 100%;
-    height: auto;
+    height: 70vh;
 }
 `
 const Main = styled(motion.div)`
 border: 2px solid ${props => props.theme.text};
 color: ${props => props.theme.text};
-padding: 2vw;
-width: 50vw;
-height: 60vh;
+width: 60vw;
+height: 65vh;
 z-index: 3;
 line-height: 1.5;
 
 font-family: 'Ubuntu Mono', monospace;
+font-size: calc(1.5vmax + 0.25em);
 font-style: italic;
-font-size: calc(0.6rem + 1vw);
+padding-left: 1.5vh;
+margin-bottom: 0;
 backdrop-filter: blur(4px);
 
 display: flex;
-justify-content: center;
-align-items: center;
+flex-direction: column;
+justify-content: space-evenly;
 position: absolute;
-left: calc(5rem + 3vw);
-top: 20%;
+left: 10%;
+top: 17%;
 `
 const container = {
     hidden: {opacity: 0},
@@ -85,15 +88,13 @@ const AboutPage = () =>{
         <SocialIcons theme='dark'/>
         <PowerButton />
         <Astonaut>
-            <img src={itachi} alt="astronaut"/>
+            <img src={itachi} alt="itachi"/>
         </Astonaut>
 
         <Main variants={main} initial='hidden' animate='show'>
-        I'm a full stack newbie with some experience in Python, C#, JavaScript, HTML and CSS. A fast learner and a self-starter.
-        <br/> <br/>
-        I'm interested in data structures, algorithms, game development, new tech, hackathons, coding challenges and all things related to software. Looking for applied sources of knowledge
-        <br/> <br/>
-        I have worked on several projects. Currently contributing to the development of a b2b telegram bot. Check out my project page to learn more and connect with me!
+        <p>I'm a full stack newbie with some experience in Python, C#, JavaScript, HTML and CSS. A fast learner and a self-starter.</p>
+        <p>I'm interested in data structures, algorithms, game development, new tech, hackathons, coding challenges and all things related to software. Looking for applied sources of knowledge</p>
+        <p>I have worked on several projects. Currently contributing to the development of a b2b telegram bot. Check out my project page to learn more and connect with me!</p>
         </Main>
 
         </Box>

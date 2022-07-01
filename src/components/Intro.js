@@ -9,9 +9,10 @@ left:50%;
 top:50%;
 transform:translate(-50%,-50%);
 
-width: 65vw;
-height: 55vh;
+width: 60vw;
+height: 65vh;
 display: flex;
+justify-content: space-between;
 
 background-repeat: no-repeat;
 background-size: 100% 10px;
@@ -25,9 +26,10 @@ transition: width 1s ease;
 
 const SubBox = styled.div`
 width:50%;
+height: 100%;
 position: relative;
 display: flex;
-background-color:#000;
+background-color:${props => props.theme.text};
 border:2px solid ${props => props.theme.body};
 
 
@@ -37,14 +39,15 @@ border:2px solid ${props => props.theme.body};
     left: 50%;
     transform:translate(-55%,0);
     width: 100%;
-    height: auto;
+    height: 100%;
     
 }
 `
 const SubBoxText = styled.div`
-font-size: calc(1em + 1.5vh);
+font-size: 4vh;
 color: ${props => props.theme.body};
-padding: 2rem;
+padding-left: 1.5vh;
+margin-bottom: 3vw;
 cursor: pointer;
 
 display: flex;
@@ -62,7 +65,7 @@ const Intro = (props) => {
   return (
     <Box
     initial={{height:0}}
-    animate={{height: '55vh'}}
+    animate={{height: '65vh'}}
     transition={{type: 'spring', duration:2, delay:1}}
     >
         <SubBox >

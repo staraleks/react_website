@@ -4,7 +4,7 @@ import styled, { keyframes } from "styled-components"
 import LogoComponent from "../subComponents/LogoComponent"
 import PowerButton from "../subComponents/PowerButton"
 import SocialIcons from "../subComponents/SocialIcons"
-import { YinYang } from "./AllSvgs"
+import { PythonLogo } from "./AllSvgs"
 import Intro from "./Intro"
 import {motion} from 'framer-motion'
 
@@ -75,11 +75,13 @@ color:${props=>props.click ? props.theme.body : props.theme.text};
 position: absolute;
 top: 50%;
 left: 0;
-transform: rotate(90deg) translate(-50%, 50%);
+margin:0;
+transform: rotate(90deg) translate(-20%, 0%);
 text-deocoration:none;
 outline:none;
 border:none;
 background:none;
+font-size: font-size: calc(0.75em + 1vmin);
 z-index:1;
 `
 
@@ -88,7 +90,8 @@ color: ${props=>props.theme.text};
 position: absolute;
 top: 45%;
 right: 1rem;
-transform: rotate(270deg) translate(-50%, -50%);
+transform: rotate(270deg) translate(-20%, 0%);
+font-size: font-size: calc(0.75em + 1vmin);
 text-deocoration:none;
 border:none;
 background:none;
@@ -148,10 +151,10 @@ const Main = () =>{
             <Container>
             <PowerButton />
             <LogoComponent theme={click ? "dark" : "light" } />
-            <SocialIcons theme={click ? "dark" : "light" } />
+            <SocialIcons theme={click ? "dark" : "light" }/>
 
             <Center click={click}>
-                <YinYang onClick={()=> handleClick()} width={click ? 120: 200} height={click ? 120: 200} fill='currentColor' />
+                <PythonLogo onClick={()=> handleClick()} width={click ? "15vw": "30vw"} height={click ? "15vh": "30vh"} fill='currentColor' />
                 <span>Click me</span>
             </Center>
             <CONTACT onClick={()=> navigate("/contact")} click={click}>
@@ -167,7 +170,7 @@ const Main = () =>{
                 whileHover={{scale: 1.1}}
                 whileTap={{scale:0.9}}
                 >
-                    Contact me
+                    Contact  
                 </motion.h2>
             </CONTACT>
             <PROJECTS onClick={()=> navigate("/projects")} click={click}>
@@ -200,7 +203,7 @@ const Main = () =>{
                 whileHover={{scale: 1.1}}
                 whileTap={{scale:0.9}}
                 >
-                    About me
+                    About 
                 </motion.h2>
             </ABOUT>
             <SKILLS onClick={()=> navigate("/skills")} click={click}>
@@ -216,7 +219,7 @@ const Main = () =>{
                 whileHover={{scale: 1.1}}
                 whileTap={{scale:0.9}}
                 >
-                    My Skills
+                     Skills
                 </motion.h2>
             </SKILLS>
             </BottomBar>
