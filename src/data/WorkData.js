@@ -50,6 +50,15 @@ export const Work = [
         github:"https://github.com/Negaflaneur/SnakeGAME"
         
     },
+    {
+        id:7,
+        name:"React portfolio",
+        description:"Current website",
+        tags:["react", "styled-components"],
+        
+        github:"https://github.com/Negaflaneur/react_website"
+        
+    },
     
   
 ] 

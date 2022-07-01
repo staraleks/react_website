@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect } from "react"
 import styled, {keyframes, ThemeProvider } from "styled-components"
 import {darkTheme} from "./Theme"
 import { Github, PythonLogo } from '../components/AllSvgs';
@@ -81,7 +81,7 @@ display: flex;
 justify-content: space-between;
 `
 
-const Link = styled(NavLink) `
+const Link = styled.a `
 background-color:${props => props.theme.body};
 color: ${props => props.theme.text};
 text-decoration: none;
@@ -95,7 +95,7 @@ ${Card}: hover &{
     color:${props => props.theme.body};
 }
 ` 
-const Git = styled(NavLink) `
+const Git = styled.a `
 color: inherit;
 text-decoration: none;
 
@@ -161,6 +161,9 @@ const card = {
 }
 
 const Projects = () =>{
+    const Redirect = (url) => {
+        window.location.replace(url);
+    }
     return(
     <ThemeProvider theme={darkTheme}>
         <Container variants={container} initial='hidden' animate='show'>
@@ -198,10 +201,10 @@ const Projects = () =>{
                         }
                     </Tags>
                     <Footer>
-                        <Link to={{pathname: `${item.github}`}} target="_blank" >
+                        <Link href= '#' onClick ={() => Redirect(`${item.github}`)} target="_blank" rel="noreferrer" >
                             Check
                         </Link>
-                        <Git to={{pathname: `${item.github}`}} target="_blank" >
+                        <Git href= '#' onClick ={() => Redirect(`${item.github}`)} target="_blank" rel="noreferrer" >
                             <Github width={"5vmax"} height={"5vmax"}/>
                         </Git>
                     </Footer>

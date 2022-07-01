@@ -46,7 +46,7 @@ const Title = styled.h2`
 display:flex;
 justify-content:center;
 align-items: center;
-font-size: calc(2.5vmax + 0.25em);
+font-size: calc(2vmax + 0.25em);
 
 ${Main}:hover &{
     &>*{
@@ -61,8 +61,8 @@ margin-right: 1.5vmax;
 
 const Description = styled.div`
 color: ${props => props.theme.text};
-font-size: calc(1.5vmax + 0.25em);
-padding: 0.3vmin 0;
+font-size: calc(0.75vmax + 0.5em);
+padding: 0.5vmin 0;
 
 strong{
     margin-bottom:0.5vmax;
@@ -123,8 +123,6 @@ const MySkillsPage = () =>{
                 <ul>
                     <li>Desktop game development</li>
                     <li>Mobile game development</li>
-                    <li>Whatever</li>
-                    <li>Whatever</li>
                 </ul>
             </Description>
             <Description>

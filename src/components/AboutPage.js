@@ -39,12 +39,12 @@ const Main = styled(motion.div)`
 border: 2px solid ${props => props.theme.text};
 color: ${props => props.theme.text};
 width: 60vw;
-height: 65vh;
+height: 75vh;
 z-index: 3;
 line-height: 1.5;
 
 font-family: 'Ubuntu Mono', monospace;
-font-size: calc(1.5vmax + 0.25em);
+font-size: calc(1vmax + 0.5em);
 font-style: italic;
 padding-left: 1.5vh;
 margin-bottom: 0;
