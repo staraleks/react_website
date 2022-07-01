@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {motion} from 'framer-motion'
 import Me from '../assets/Images/intro_image.png'
+import {IntroImg} from "./AllSvgs"
 
 const Box = styled(motion.div)`
 position: absolute;
@@ -39,7 +40,7 @@ border:2px solid ${props => props.theme.body};
     left: 50%;
     transform:translate(-55%,0);
     width: 100%;
-    height: 100%;
+    height: 80%;
     
 }
 `
