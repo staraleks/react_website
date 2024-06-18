@@ -21,7 +21,7 @@ function App() {
     <ThemeProvider theme={lightTheme}>
     <SoundBar />
 
-  <AnimatePresence exitBeforeEnter>
+  <AnimatePresence mode="wait">
   <Routes location={location} key={location.pathname}>
     <Route exact path="/" element={<Main />} />
     <Route exact path="/about" element={<AboutPage />} />

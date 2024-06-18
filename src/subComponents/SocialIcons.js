@@ -56,7 +56,7 @@ const SocialIcons = (props) =>{
             animate={{scale:[0,1,1.5,1]}}
             transition={{type:'spring', duration:1, delay:1.4}}
             >
-                <SocialLink color={props.theme} target="_blank" to={{pathname:"https://www.facebook.com/profile.php?id=100080368590470"}}>
+                <SocialLink color={props.theme} target="_blank" to={{pathname:"https://www.facebook.com/profile.php/id=100080368590470"}}>
                     <Facebook width={'6vw'} height={'5vh'} fill={props.theme === 'dark' ? darkTheme.text : darkTheme.body}/>
                 </SocialLink>
             </motion.div>
